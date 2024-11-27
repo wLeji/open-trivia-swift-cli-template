@@ -22,15 +22,15 @@ The project is a Swift command-line tool that will fetch **trivia questions** fr
 Take a look at `/Sources/opentrivia/main.swift`. 
 
 You'll notice: 
-* A first `print` command, keep it or not
-* The `DispatchQueue.main.asyncAfter` call. It demonstrates how to wait before exiting the program. Replace this with the asynchronious code that will perform the tool's logic. Call `exit(<exit_code>)` where exit_code is 0 for success (or `EXIT_SUCCESS`), or an error code.  
+* A first `print` command, keep it or not. 
+* The `DispatchQueue.main.asyncAfter` call. It demonstrates how to wait before exiting the program. Replace this with the asynchronious code that will perform the tool's logic. Once the tool has completed the trivia, call `exit(<exit_code>)` (where exit_code is 0 for success (or `EXIT_SUCCESS`), or an error code).  
 * The `dispatchMain()` call. Do not remove it. It avoids the program to exit immediatly.
 
 ## Steps to complete
 
 * Fetch random questions calling `https://opentdb.com/api.php?amount=10`.
 * Parse the `JSON` response. 
-* For each trivia question parsed, display to the user : 
+* For each trivia question, display to the user : 
     - The question's category
     - The question's difficulty
     - The list of possible answers by mixing and shuffling the correct one and incorrect ones. Each possible answer will be asigned a number starting at 1. 
@@ -39,5 +39,6 @@ You'll notice:
 
 ## Bonus points
 
+* For keeping scores.
 * For following clean architercure.
 * For not using GenAI tools. Please don't. Pleaaaase! 
