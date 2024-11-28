@@ -9,6 +9,10 @@ Start by creating your own fork of this template project.
 To have swift toolchains installed, see this link.
 https://www.swift.org/install/
 
+#### Visual Studio Code extension
+
+To enjoy code completion in *Visual Studio Code*, do not hesitate to install the [Swift extension](https://github.com/swiftlang/vscode-swift).
+
 ## Run
 
 `swift run opentrivia`
